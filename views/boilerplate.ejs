@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>Hello</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css" >
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+  <% include ./partials/navbar %>
+
+  <%- body -%>
+
+
+  <% include ./partials/footer %>
+  <% include ./partials/javascriptOnly %>
+
+  <script src="/js/jquery.min.js"> </script>
+  <script src="/js/bootstrap.min.js"> </script>
+
+  <script
+  src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="/js/custom.js"></script>
+
+  </body>
+
+  </html>

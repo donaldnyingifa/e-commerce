@@ -1,0 +1,12 @@
+<% layout('boilerplate') -%>
+
+<p> hello <%= user.profile.firstName %> </p>
+
+<p> Full Name: <%= user.profile.firstName %>   <%= user.profile.lastName %></p>
+<p> Email <%= user.email %> </p>
+<p> Phone Number <%= user.profile.phonenumber %> </p>
+<p> Address <%= user.profile.address %> </p>
+<img class="img-circle img-responsive img-center" src="<%= user.profile.picture %>" alt="">
+
+
+<a href = '/edit-profile' class="btn btn-default btn-lg">edit profile</a>

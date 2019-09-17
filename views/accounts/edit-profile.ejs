@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <title>Hello</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css" >
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+  <% include ../partials/navbar %>
+
+<section id="form"><!--form-->
+		<div class="container">
+      <% if (message.length > 0) { %>
+        <div class = "alert alert-danger alert-dismissible">
+          <button type = "button" class= "close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden ="true">&times;</span>
+          </button>
+          <%= message %>
+        </div>
+      <%} %>
+
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-1">
+				</div>
+				<div class="col-sm-1">
+					<h2 class="or">OR</h2>
+				</div>
+				<div class="col-sm-4">
+					<div class="signup-form"><!--sign up form-->
+						<h2>New User Signup!</h2>
+						<form method="post">
+              <input type="text" name="firstName" value="<%= user.profile.firstName %>" />
+							<input type="text" name="lastName" value="<%= user.profile.lastName %>" />
+							<input type="text" name="phonenumber" value="<%= user.profile.phonenumber %>"/>
+							<input type="text" name="address" value="<%= user.profile.address %>" />
+							<button type="submit" class="btn btn-default">Save</button>
+						</form>
+					</div><!--/sign up form -->
+				</div>
+			</div>
+		</div>
+	</section><!--/form-->
+  <script src="/js/jquery.min.js"> </script>
+  <script src="/js/bootstrap.min.js"> </script>
+</body>

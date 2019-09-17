@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <title>Hello</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css" >
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+  <% include ../partials/navbar %>
+
+<section id="form"><!--form-->
+		<div class="container">
+      <% if (message.length > 0) { %>
+        <div class = "alert alert-success alert-dismissible">
+          <button type = "button" class= "close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden ="true">&times;</span>
+          </button>
+          <%= message %>
+        </div>
+      <%} %>
+
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-1">
+					<div class="login-form"><!--login form-->
+						<h2>Add a New Category</h2>
+						<form method="post">
+							<input type="text" name ="name" placeholder="Category's Name" />
+							<button type="submit" class="btn btn-default">Add</button>
+						</form>
+					</div><!--/login form-->
+				</div>
+
+			</div>
+		</div>
+	</section><!--/form-->
+
+</body>
+<script src="/js/jquery.min.js"> </script>
+<script src="/js/bootstrap.min.js"> </script>
